@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - Macoy's Strengthening Beauty Salon</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/appointment.css">
+    <script src="https://kit.fontawesome.com/7a6c6b42a6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <a href="./index.html" class="logo">Macoy</a>
+        <div class="menuToggle"></div>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./protfolio.html">Portfolio</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./search.html"><i class="fas fa-search"></i>Search</a></li>
+                <li class="account-menu">
+                    <a href="./accounts.html" class="account-btn">
+                        <i class="fas fa-user"></i>Accounts
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="appointment-container">
+        <div class="appointment-header">
+            <h1>Book Your Appointment</h1>
+            <p>Select a service, choose your date and time, and confirm your booking</p>
+        </div>
+
+        <div class="appointment-content">
+            <!-- Left Side: Service Selection -->
+            <div class="service-selection">
+                <h2>Select Service</h2>
+                
+                <div class="service-category">
+                    <h3>Salon Services</h3>
+                    <div class="service-list">
+                        <div class="service-item" data-service="all-in-trio" data-price="₱1399" data-slots="5">
+                            <div class="service-info">
+                                <span class="service-name">ALL IN TRIO</span>
+                                <span class="service-price">₱1399</span>
+                            </div>
+                            <div class="slot-info">
+                                <span class="slots-available">5 slots left</span>
+                            </div>
+                        </div>
+                        <div class="service-item" data-service="color" data-price="₱499" data-slots="8">
+                            <div class="service-info">
+                                <span class="service-name">COLOR</span>
+                                <span class="service-price">₱499</span>
+                            </div>
+                            <div class="slot-info">
+                                <span class="slots-available">8 slots left</span>
+                            </div>
+                        </div>
+                        <div class="service-item" data-service="rebond" data-price="₱499" data-slots="6">
+                            <div class="service-info">
+                                <span class="service-name">REBOND</span>
+                                <span class="service-price">₱499</span>
+                            </div>
+                            <div class="slot-info">
+                                <span class="slots-available">6 slots left</span>
+                            </div>
+                        </div>
+                        <div class="service-item" data-service="haircut" data-price="₱499" data-slots="10">
+                            <div class="service-info">
+                                <span class="service-name">HAIR CUT</span>
+                                <span class="service-price">₱499</span>
+                            </div>
+                            <div class="slot-info">
+                                <span class="slots-available">10 slots left</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-category">
+                    <h3>Special Services</h3>
+                    <div class="service-list">
+                        <div class="service-item" data-service="micro-blending" data-price="$95" data-slots="3">
+                            <div class="service-info">
+                                <span class="service-name">MICRO BLENDING</span>
+                                <span class="service-price">$95</span>
+                            </div>
+                            <div class="slot-info">
+                                <span class="slots-available">3 slots left</span>
+                            </div>
+                        </div>
+                        <div class="service-item" data-service="eyelash-extension" data-price="$55" data-slots="4">
+                            <div class="service-info">
+                                <span class="service-name">EYELASH EXTENSION</span>
+                                <span class="service-price">$55</span>
+                            </div>
+                            <div class="slot-info">
+                                <span class="slots-available">4 slots left</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-category">
+                    <h3>Foot Services</h3>
+                    <div class="service-list">
+                        <div class="service-item" data-service="manicure" data-price="$95" data-slots="7">
+                            <div class="service-info">
+                                <span class="service-name">MANICURE</span>
+                                <span class="service-price">$95</span>
+                            </div>
+                            <div class="slot-info">
+                                <span class="slots-available">7 slots left</span>
+                            </div>
+                        </div>
+                        <div class="service-item" data-service="pedicure" data-price="$40+" data-slots="5">
+                            <div class="service-info">
+                                <span class="service-name">PEDICURE</span>
+                                <span class="service-price">$40+</span>
+                            </div>
+                            <div class="slot-info">
+                                <span class="slots-available">5 slots left</span>
+                            </div>
+                        </div>
+                        <div class="service-item" data-service="foot-spa" data-price="$40+" data-slots="4">
+                            <div class="service-info">
+                                <span class="service-name">FOOT SPA</span>
+                                <span class="service-price">$40+</span>
+                            </div>
+                            <div class="slot-info">
+                                <span class="slots-available">4 slots left</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-note">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Limited slots available per service. Book now to secure your preferred time!</span>
+                </div>
+            </div>
+
+            <!-- Right Side: Calendar & Time Selection -->
+            <div class="booking-details">
+                <h2>Select Date & Time</h2>
+                
+                <!-- Calendar -->
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <button id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+                        <span id="currentMonth"></span>
+                        <button id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="calendar-weekdays">
+                        <span>Sun</span>
+                        <span>Mon</span>
+                        <span>Tue</span>
+                        <span>Wed</span>
+                        <span>Thu</span>
+                        <span>Fri</span>
+                        <span>Sat</span>
+                    </div>
+                    <div class="calendar-days" id="calendarDays">
+                        <!-- Days will be generated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Time Slots -->
+                <div class="time-slots">
+                    <h3>Available Time Slots</h3>
+                    <div class="time-options" id="timeSlots">
+                        <button class="time-btn" data-time="09:00">9:00 AM</button>
+                        <button class="time-btn" data-time="10:00">10:00 AM</button>
+                        <button class="time-btn" data-time="11:00">11:00 AM</button>
+                        <button class="time-btn" data-time="12:00">12:00 PM</button>
+                        <button class="time-btn" data-time="13:00">1:00 PM</button>
+                        <button class="time-btn" data-time="14:00">2:00 PM</button>
+                        <button class="time-btn" data-time="15:00">3:00 PM</button>
+                        <button class="time-btn" data-time="16:00">4:00 PM</button>
+                        <button class="time-btn" data-time="17:00">5:00 PM</button>
+                    </div>
+                </div>
+
+                <!-- Stylist Availability -->
+                <div class="stylist-selection">
+                    <h3>Select Stylist</h3>
+                    <div class="stylist-list" id="stylistList">
+                        <div class="stylist-item" data-stylist="any" data-name="Any Available Stylist">
+                            <div class="stylist-info">
+                                <span class="stylist-avatar"><i class="fas fa-user"></i></span>
+                                <span class="stylist-name">Any Available Stylist</span>
+                            </div>
+                        </div>
+                        <div class="stylist-item" data-stylist="maria" data-name="Maria - Senior Stylist">
+                            <div class="stylist-info">
+                                <span class="stylist-avatar"><i class="fas fa-user"></i></span>
+                                <span class="stylist-name">Maria - Senior Stylist</span>
+                            </div>
+                        </div>
+                        <div class="stylist-item" data-stylist="john" data-name="John - Color Specialist">
+                            <div class="stylist-info">
+                                <span class="stylist-avatar"><i class="fas fa-user"></i></span>
+                                <span class="stylist-name">John - Color Specialist</span>
+                            </div>
+                        </div>
+                        <div class="stylist-item" data-stylist="sarah" data-name="Sarah - Hair Expert">
+                            <div class="stylist-info">
+                                <span class="stylist-avatar"><i class="fas fa-user"></i></span>
+                                <span class="stylist-name">Sarah - Hair Expert</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Selected Service Summary -->
+                <div class="booking-summary" id="bookingSummary">
+                    <h3>Booking Summary</h3>
+                    <div class="summary-content">
+                        <p class="no-service">Please select a service to continue</p>
+                    </div>
+                </div>
+
+                <!-- Confirm Button -->
+                <button class="btn-confirm" id="confirmBooking" disabled>
+                    <i class="fas fa-check-circle"></i> Confirm Booking
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script>
+        // Calendar functionality
+        const calendarDays = document.getElementById('calendarDays');
+        const currentMonthSpan = document.getElementById('currentMonth');
+        const prevMonthBtn = document.getElementById('prevMonth');
+        const nextMonthBtn = document.getElementById('nextMonth');
+        
+        let currentDate = new Date();
+        let selectedDate = null;
+        let selectedTime = null;
+        let selectedService = null;
+        let selectedStylist = null;
+
+        function renderCalendar() {
+            const year = currentDate.getFullYear();
+            const month = currentDate.getMonth();
+            
+            const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 
+                              'July', 'August', 'September', 'October', 'November', 'December'];
+            
+            currentMonthSpan.textContent = `${monthNames[month]} ${year}`;
+            
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            
+            calendarDays.innerHTML = '';
+            
+            // Empty cells for days before the first day of the month
+            for (let i = 0; i < firstDay; i++) {
+                const emptyDay = document.createElement('span');
+                calendarDays.appendChild(emptyDay);
+            }
+            
+            // Days of the month
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayCell = document.createElement('button');
+                dayCell.textContent = day;
+                dayCell.classList.add('calendar-day');
+                
+                // Check if date is in the past
+                const checkDate = new Date(year, month, day);
+                const today = new Date();
+                today.setHours(0, 0, 0, 0);
+                
+                if (checkDate < today) {
+                    dayCell.classList.add('past-date');
+                } else {
+                    dayCell.addEventListener('click', () => selectDate(dayCell, checkDate));
+                }
+                
+                calendarDays.appendChild(dayCell);
+            }
+        }
+
+        function selectDate(element, date) {
+            // Remove previous selection
+            document.querySelectorAll('.calendar-day').forEach(day => day.classList.remove('selected'));
+            
+            // Add selection to clicked date
+            element.classList.add('selected');
+            selectedDate = date;
+            
+            updateBookingSummary();
+        }
+
+        // Month navigation
+        prevMonthBtn.addEventListener('click', () => {
+            currentDate.setMonth(currentDate.getMonth() - 1);
+            renderCalendar();
+        });
+
+        nextMonthBtn.addEventListener('click', () => {
+            currentDate.setMonth(currentDate.getMonth() + 1);
+            renderCalendar();
+        });
+
+        // Initialize calendar
+        renderCalendar();
+
+        // Service selection
+        document.querySelectorAll('.service-item').forEach(item => {
+            item.addEventListener('click', () => {
+                document.querySelectorAll('.service-item').forEach(i => i.classList.remove('selected'));
+                item.classList.add('selected');
+                
+                selectedService = {
+                    name: item.querySelector('.service-name').textContent,
+                    price: item.querySelector('.service-price').textContent,
+                    slots: item.dataset.slots
+                };
+                
+                updateBookingSummary();
+            });
+        });
+
+        // Time selection
+        document.querySelectorAll('.time-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.time-btn').forEach(b => b.classList.remove('selected'));
+                btn.classList.add('selected');
+                selectedTime = btn.dataset.time;
+                
+                updateBookingSummary();
+            });
+        });
+
+        // Stylist selection
+        document.querySelectorAll('.stylist-item').forEach(item => {
+            item.addEventListener('click', () => {
+                document.querySelectorAll('.stylist-item').forEach(s => s.classList.remove('selected'));
+                item.classList.add('selected');
+                selectedStylist = {
+                    id: item.dataset.stylist,
+                    name: item.dataset.name
+                };
+                
+                updateBookingSummary();
+            });
+        });
+
+        // Update booking summary
+        function updateBookingSummary() {
+            const summaryContent = document.querySelector('.summary-content');
+            const confirmBtn = document.getElementById('confirmBooking');
+            
+            if (!selectedService || !selectedDate || !selectedTime) {
+                summaryContent.innerHTML = '<p class="no-service">Please select a service, date, and time to continue</p>';
+                confirmBtn.disabled = true;
+                return;
+            }
+            
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = selectedDate.toLocaleDateString('en-US', options);
+            
+            const stylistDisplay = selectedStylist ? selectedStylist.name : 'Any Available Stylist';
+            
+            summaryContent.innerHTML = `
+                <div class="summary-item">
+                    <span class="summary-label">Service:</span>
+                    <span class="summary-value">${selectedService.name}</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">Price:</span>
+                    <span class="summary-value">${selectedService.price}</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">Date:</span>
+                    <span class="summary-value">${formattedDate}</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">Time:</span>
+                    <span class="summary-value">${selectedTime}</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">Stylist:</span>
+                    <span class="summary-value">${stylistDisplay}</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">Available Slots:</span>
+                    <span class="summary-value">${selectedService.slots}</span>
+                </div>
+            `;
+            
+            confirmBtn.disabled = false;
+        }
+
+// Confirm booking
+        document.getElementById('confirmBooking').addEventListener('click', () => {
+            if (selectedService && selectedDate && selectedTime) {
+                // Get existing bookings or initialize empty array
+                let bookings = JSON.parse(localStorage.getItem('userBookings') || '[]');
+                
+                // Create new booking
+                const booking = {
+                    service: selectedService.name,
+                    price: selectedService.price,
+                    date: selectedDate.toISOString(),
+                    time: selectedTime,
+                    slots: selectedService.slots,
+                    stylist: selectedStylist ? selectedStylist.name : 'Any Available Stylist',
+                    bookingId: 'BK-' + Date.now()
+                };
+                
+                // Add to bookings array
+                bookings.push(booking);
+                
+                // Save to localStorage
+                localStorage.setItem('userBookings', JSON.stringify(bookings));
+                
+                alert('Appointment booked successfully! Your booking ID is ' + booking.bookingId);
+                
+                // Redirect to accounts page with schedule tab
+                window.location.href = './accounts.html#schedule';
+            }
+        });
+    </script>
+</body>
+</html>
+
