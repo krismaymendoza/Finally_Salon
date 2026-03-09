@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account - Macoy's Strengthening Beauty Salon</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/accounts.css">
+    <script src="https://kit.fontawesome.com/7a6c6b42a6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <a href="./index.html" class="logo">Macoy</a>
+        <div class="menuToggle"></div>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./protfolio.html">protfolio</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./search.html"><i class="fas fa-search"></i>Search</a></li>
+                <li class="account-menu">
+                    <a href="./accounts.html" class="account-btn">
+                        <i class="fas fa-user"></i>Accounts
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="account-container">
+        <!-- Sidebar Navigation -->
+        <div class="account-sidebar">
+            <div class="sidebar-header">
+                <h3>Account</h3>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active" data-tab="profile">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </li>
+                <li data-tab="schedule">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>My Schedule</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="account-content">
+            <!-- Profile Section (includes Profile + Preferences in two columns) -->
+            <div class="content-section active" id="profile">
+                <div class="section-header">
+                    <h2>Profile</h2>
+                </div>
+                
+                <div class="profile-columns">
+<!-- Left Column: Profile Info -->
+                    <div class="profile-column">
+                        <div class="profile-card">
+                            <!-- Profile Picture at top - centered -->
+                            <div class="profile-picture-section">
+                                <div class="avatar">
+                                    <img id="profileImage" src="./img/profile-image.jpg" alt="Profile">
+                                </div>
+                                <label for="pictureInput" class="change-photo-btn">
+                                    <i class="fas fa-camera"></i> Change Photo
+                                </label>
+                                <input type="file" id="pictureInput" accept="image/*" style="display: none;">
+                            </div>
+                            
+<div class="profile-details">
+                                <h3 id="displayName">Macoy Manuel Veloso</h3>
+                                <div class="email-verified">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span id="displayEmail">macoy@example.com</span>
+                                </div>
+                                <p class="client-id">Client ID: <span id="clientId">#MSB-2024-001</span></p>
+                            </div>
+                            
+<!-- Editable Account Details -->
+                            <div class="account-details" id="accountDetailsSection">
+                                <!-- Display Mode (Static Text) -->
+                                <div class="detail-display" id="detailDisplay">
+                                    <div class="detail-item">
+                                        <label>Full Name</label>
+                                        <p id="displayFullName">Macoy Manuel Veloso</p>
+                                    </div>
+                                    <div class="detail-item">
+                                        <label>Phone Number</label>
+                                        <p id="displayPhone">+1 233 432 5532</p>
+                                    </div>
+                                    <div class="detail-item">
+                                        <label>Address</label>
+                                        <p id="displayAddress">Paliparan 3 Mabuhay City subd., blg. 123, Dasmariñas City, Cavite</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Edit Mode (Input Fields) -->
+                                <div class="detail-edit" id="detailEdit" style="display: none;">
+                                    <div class="detail-item">
+                                        <label>Full Name</label>
+                                        <input type="text" id="inputFullName" value="Macoy Manuel Veloso" class="edit-input">
+                                    </div>
+                                    <div class="detail-item">
+                                        <label>Phone Number</label>
+                                        <input type="tel" id="inputPhone" value="+1 233 432 5532" class="edit-input">
+                                    </div>
+                                    <div class="detail-item">
+                                        <label>Address</label>
+                                        <textarea id="inputAddress" class="edit-input">Paliparan 3 Mabuhay City subd., blg. 123, Dasmariñas City, Cavite</textarea>
+                                    </div>
+                                    <button class="btn-save" id="saveProfileBtn">
+                                        <i class="fas fa-save"></i> Save Changes
+                                    </button>
+                                </div>
+                                
+                                <!-- Edit Profile Button (shown in display mode) -->
+                                <button class="btn-edit" id="editProfileBtn">
+                                    <i class="fas fa-edit"></i> Edit Profile
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Preferences -->
+                    <div class="preferences-column">
+<div class="preferences-card">
+                            <h3>Preferences</h3>
+                            <div class="preferences-content">
+                                <div class="preference-item">
+                                    <label>Email Notifications</label>
+                                    <input type="checkbox" checked>
+                                </div>
+                                <div class="preference-item">
+                                    <label>Schedule Reminder</label>
+                                    <input type="checkbox" checked>
+                                </div>
+<div class="preference-item">
+                                    <label>SMS Alert</label>
+                                    <input type="checkbox" checked>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!-- My Schedule Section -->
+            <div class="content-section" id="schedule">
+                <div class="section-header">
+                    <h2>My Schedule</h2>
+                </div>
+                <div class="schedule-content" id="scheduleContent">
+                    <p>No upcoming appointments</p>
+                    <a href="./appointment.html" class="btn-book">Book an Appointment</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="./js/script.js"></script>
+    <script>
+        // Auto-generate permanent Client ID on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load saved profile data
+            loadProfileData();
+            
+            // Load booking data for My Schedule
+            loadBookingData();
+            
+            // Check if user already has a Client ID stored
+            let clientId = localStorage.getItem('userClientId');
+            
+            if (!clientId) {
+                // Get current count from localStorage or initialize to 1
+                let clientCount = localStorage.getItem('clientCount');
+                if (!clientCount) {
+                    clientCount = 1;
+                } else {
+                    clientCount = parseInt(clientCount) + 1;
+                }
+                
+                // Save the new count
+                localStorage.setItem('clientCount', clientCount);
+                
+                // Generate new Client ID with incrementing number
+                const year = new Date().getFullYear();
+                clientId = '#MSB-' + year + '-' + String(clientCount).padStart(3, '0');
+                
+                // Store the Client ID permanently for this user
+                localStorage.setItem('userClientId', clientId);
+            }
+            
+            // Update the Client ID display
+            document.getElementById('clientId').textContent = clientId;
+            
+            // Handle profile picture change
+            document.getElementById('pictureInput').addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(event) {
+                        document.getElementById('profileImage').src = event.target.result;
+                        localStorage.setItem('userProfileImage', event.target.result);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+            
+            // Edit Profile button click - show edit mode
+            document.getElementById('editProfileBtn').addEventListener('click', function() {
+                document.getElementById('detailDisplay').style.display = 'none';
+                document.getElementById('detailEdit').style.display = 'block';
+                document.getElementById('editProfileBtn').style.display = 'none';
+            });
+            
+            // Handle save button click
+            document.getElementById('saveProfileBtn').addEventListener('click', function() {
+                const fullName = document.getElementById('inputFullName').value;
+                const phone = document.getElementById('inputPhone').value;
+                const address = document.getElementById('inputAddress').value;
+                
+                // Update display section
+                document.getElementById('displayFullName').textContent = fullName;
+                document.getElementById('displayPhone').textContent = phone;
+                document.getElementById('displayAddress').textContent = address;
+                document.getElementById('displayName').textContent = fullName;
+                
+                // Save to localStorage
+                localStorage.setItem('userFullName', fullName);
+                localStorage.setItem('userPhone', phone);
+                localStorage.setItem('userAddress', address);
+                
+                // Switch back to display mode
+                document.getElementById('detailDisplay').style.display = 'block';
+                document.getElementById('detailEdit').style.display = 'none';
+                document.getElementById('editProfileBtn').style.display = 'inline-flex';
+                
+                // Show success message
+                alert('Profile saved successfully!');
+            });
+            
+            // Function to load profile data
+            function loadProfileData() {
+                if (localStorage.getItem('userFullName')) {
+                    const fullName = localStorage.getItem('userFullName');
+                    document.getElementById('displayName').textContent = fullName;
+                    document.getElementById('displayFullName').textContent = fullName;
+                    document.getElementById('inputFullName').value = fullName;
+                }
+                if (localStorage.getItem('userPhone')) {
+                    const phone = localStorage.getItem('userPhone');
+                    document.getElementById('displayPhone').textContent = phone;
+                    document.getElementById('inputPhone').value = phone;
+                }
+                if (localStorage.getItem('userAddress')) {
+                    const address = localStorage.getItem('userAddress');
+                    document.getElementById('displayAddress').textContent = address;
+                    document.getElementById('inputAddress').value = address;
+                }
+                if (localStorage.getItem('userProfileImage')) {
+                    document.getElementById('profileImage').src = localStorage.getItem('userProfileImage');
+                }
+            }
+            
+            // Function to load booking data for My Schedule
+            function loadBookingData() {
+                const bookingData = localStorage.getItem('userBooking');
+                const scheduleContent = document.getElementById('scheduleContent');
+                
+                if (bookingData) {
+                    const booking = JSON.parse(bookingData);
+                    const bookingDate = new Date(booking.date);
+                    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                    const formattedDate = bookingDate.toLocaleDateString('en-US', options);
+                    
+                    scheduleContent.innerHTML = `
+                        <div class="booking-details-card">
+                            <div class="booking-header">
+                                <span class="booking-id">${booking.bookingId}</span>
+                                <span class="booking-status">Confirmed</span>
+                            </div>
+                            <div class="booking-info">
+                                <div class="info-item">
+                                    <i class="fas fa-cut"></i>
+                                    <span>${booking.service}</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-tag"></i>
+                                    <span>${booking.price}</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>${formattedDate}</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>${booking.time}</span>
+                                </div>
+                            </div>
+                            <div class="booking-slots">
+                                <i class="fas fa-users"></i>
+                                <span>${booking.slots} slots remaining for this service</span>
+                            </div>
+                        </div>
+                    `;
+                }
+            }
+        });
+
+        // Tab switching functionality
+        const sidebarItems = document.querySelectorAll('.sidebar-menu li');
+        const contentSections = document.querySelectorAll('.content-section');
+
+        sidebarItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const tabId = item.getAttribute('data-tab');
+                
+                // Remove active class from all sidebar items
+                sidebarItems.forEach(i => i.classList.remove('active'));
+                // Add active class to clicked item
+                item.classList.add('active');
+
+                // Hide all content sections
+                contentSections.forEach(section => section.classList.remove('active'));
+                // Show the selected content section
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

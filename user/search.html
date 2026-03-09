@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Searchbar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #333;
+      color: #fff;
+      padding: 15px;
+      z-index: 1000;
+    }
+
+    header a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+
+    /* Search bar container (hidden by default) */
+    .search-container {
+      position: fixed;
+      top: -60px; /* hidden above viewport */
+      left: 0;
+      width: 100%;
+      background: #f9f9f9;
+      padding: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: top 0.3s ease;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-container.active {
+      top: 60px; /* slides down below header */
+    }
+
+    .search-container i {
+      font-size: 20px;
+      margin-right: 10px;
+      cursor: pointer;
+      color: #333;
+    }
+
+    .search-container input {
+      flex: 1;
+      padding: 8px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+<a id="searchLink"><i class="fa-solid fa-magnifying-glass"></i></a>
+  </header>
+
+  <div class="search-container" id="searchBox">
+    <i class="fa-solid fa-arrow-left" id="backArrow"></i>
+    <input type="text" placeholder="Type to search...">
+  </div>
+
+  <script>
+    const searchLink = document.getElementById("searchLink");
+    const searchBox = document.getElementById("searchBox");
+    const backArrow = document.getElementById("backArrow");
+
+    // Show search bar when clicking search link
+    searchLink.addEventListener("click", () => {
+      searchBox.classList.add("active");
+      searchBox.querySelector("input").focus();
+    });
+
+    // Hide search bar when clicking back arrow
+    backArrow.addEventListener("click", () => {
+      searchBox.classList.remove("active");
+    });
+  </script>
+</body>
+</html>
